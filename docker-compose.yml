@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  webpack:
+    build: ./docker/webpack
+    volumes:
+      - ./src:/my_webpack/src
+      - ./dist:/my_webpack/dist
+      # - ./docker/webpack/package.json:/my_webpack/package.json
+      # - ./docker/webpack/webpack.config.js:/my_webpack/webpack.config.js
+    ports:
+      - 2000:2000
+    tty: true
